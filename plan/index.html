@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>기말 프로젝트 기획서</title>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         max-width: 960px;
+         margin: 0 auto;
+         padding: 32px 20px;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         line-height: 1.6;
+         color: #222;
+         background: #f9fafb;
+      }
+
+      header {
+         border-bottom: 2px solid #1e3a8a;
+         padding-bottom: 16px;
+         margin-bottom: 32px;
+      }
+
+      h1 {
+         margin: 0 0 8px;
+         color: #1e3a8a;
+      }
+
+      h2 {
+         margin: 32px 0 12px;
+         padding-left: 10px;
+         border-left: 4px solid #1e3a8a;
+         font-size: 1.25rem;
+      }
+
+      section {
+         background: #fff;
+         padding: 20px 24px;
+         margin-bottom: 20px;
+         border: 1px solid #e5e7eb;
+         border-radius: 8px;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 12px;
+         font-size: 0.92rem;
+      }
+
+      th,
+      td {
+         border: 1px solid #d1d5db;
+         padding: 10px;
+         text-align: left;
+         word-break: break-all;
+      }
+
+      th {
+         background: #eff6ff;
+         color: #1e3a8a;
+      }
+
+      figure {
+         margin: 12px 0 0;
+         padding: 12px;
+         border: 1px solid #e5e7eb;
+         border-radius: 6px;
+         background: #f8fafc;
+         text-align: center;
+      }
+
+      figure img {
+         max-width: 100%;
+         height: auto;
+         display: block;
+         margin: 0 auto 8px;
+         border: 1px solid #cbd5e1;
+      }
+
+      figcaption {
+         font-size: 0.88rem;
+         color: #475569;
+      }
+
+      .sketch-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         gap: 16px;
+      }
+
+      ul {
+         padding-left: 20px;
+         margin: 8px 0;
+      }
+
+      li {
+         margin-bottom: 6px;
+      }
+   </style>
+</head>
+
+
+
+<body>
+   <header>
+      <h1>[과몰입보드] 프로젝트 기획서</h1>
+      <p>작성자: YoonHee Min | GitHub ID: nan041768-ui</p>
+   </header>
+
+   <main>
+
+
+      <!-- 요구항목1. 기본 정보 -->
+      <section>
+         <h2>1. 기본 정보</h2>
+         <ul>
+            <li><strong>이름:</strong> 민윤희</li>
+            <li><strong>GitHub ID:</strong> nan041768-ui</li>
+            <li><strong>사이트 이름:</strong> 과몰입보드 (OverMoodBoard)</li>
+         </ul>
+      </section>
+
+
+
+      <!-- 2. 사이트 소개 및 구성 -->
+      <section>
+         <h2>2. 사이트 소개 · 주요 화면</h2>
+         <ul>
+            <li><strong>대상:</strong> 영화 감상 후 해당 영화의 여운·분위기와 관련된 이미지 수집을 희망하는 영화 팬 대상</li>
+            <li><strong>보드 (index.html):</strong> TMDB 실시간 영화 목록, 제목 검색, 정렬(평점순·최신 개봉순·제목 가나다순), 찜 토글·저장 개수 표시</li>
+            <li><strong>박스오피스 (boxoffice.html):</strong> KOBIS 일별 박스오피스 순위·관객 수·개봉일, TMDB 포스터</li>
+            <li><strong>상세 (detail.html):</strong> 세부 정보(선택 영화 TMDB 추가 호출 → 대형 포스터, 제목, 개봉일, 평점, 줄거리, 장르 등)</li>
+         </ul>
+      </section>
+
+
+
+      <!-- 3. 플러스원 페이지 및 API 표 -->
+      <section>
+         <h2>3. 플러스원 페이지 · 사용 API</h2>
+         <ul>
+            <li><strong>페이지 이름:</strong> 과몰입보드</li>
+            <li><strong>한 줄 소개:</strong> 영화 분위기 키워드 입력 시 관련 이미지/배경화면 탐색 페이지</li>
+         </ul>
+         <table>
+            <thead>
+               <tr>
+                  <th>API 이름</th>
+                  <th>제공기관</th>
+                  <th>대표 요청 주소</th>
+                  <th>키 이름</th>
+                  <th>키 발급 상태</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Pixabay API</td>
+                  <td>Pixabay</td>
+                  <td>https://pixabay.com/api/?key=KEY&q=검색어&image_type=photo&lang=ko</td>
+                  <td>PIXABAY_KEY</td>
+                  <td>받음</td>
+               </tr>
+            </tbody>
+         </table>
+      </section>
+
+
+
+      <!-- 4. 주소창 호출 결과 캡처 1장 -->
+      <section>
+         <h2>4. 주소창 호출 결과</h2>
+         <figure>
+            <img src="./call.png" alt="API 주소창 호출 결과 캡처">
+            <figcaption> call.png: Pixabay hits 배열 '밤하늘' 사진 5건</figcaption>
+         </figure>
+      </section>
+
+
+
+      <!-- 5. 화면 스케치 2장 -->
+      <section>
+         <h2>5. 화면 스케치</h2>
+         <div class="sketch-grid">
+            <figure>
+               <img src="sketch-board.jpg" alt="보드 화면 스케치">
+               <figcaption>보드 화면 스케치</figcaption>
+            </figure>
+            <figure>
+               <img src="sketch-plusone.jpg" alt="플러스원 페이지 화면 스케치">
+               <figcaption>플러스원 페이지 화면 스케치</figcaption>
+            </figure>
+         </div>
+      </section>
+
+
+
+      <!-- 6. 퍼뜨릴 계획과 받고 싶은 페이지 -->
+      <section>
+         <h2>6. 퍼뜨릴 계획과 받고 싶은 페이지</h2>
+         <ul>
+            <li><strong>누구에게:</strong> 영화 감상 후 여운을 중요시하는 학생, 리뷰·추천 중심 영화 사이트 제작한 학생</li>
+            <li><strong>왜 쓸모:</strong> 감상한 영화와 관련된 키워드에 맞는 분위기의 이미지/배경화면 조회 가능, 영화 감상의 여운 확장</li>
+            <li><strong>받고 싶은 페이지:</strong> 영화 원작 도서 찾기</li>
+         </ul>
+      </section>
+
+
+
+      <!-- 7. 13~15주차 일정, 위험, 대안 -->
+      <section>
+         <h2>7. 13~15주차 일정과 위험, 대안</h2>
+         <ul>
+            <li><strong>13주차:</strong> TMDB 실시간 보드·상세·KOBIS 박스오피스 1차 점검</li>
+            <li><strong>14주차:</strong> Pixabay 무드보드 플러스원 페이지 구현, 동료 PR 교환, pages.html 연결</li>
+            <li><strong>15주차:</strong> 최종 제출</li>
+            <li><strong>위험 1 및 대안:</strong> 한글 검색 결과 0건 ⇒ 빈 결과 안내 문구, 추천 분위기 키워드 버튼(밤하늘, 우주, 네온) 표시</li>
+            <li><strong>위험 2 및 대안:</strong> Pixabay 호출 한도 초과·사용량 경고 ⇒ Enter·버튼 클릭 시점 호출 제한, 경고 시 키 재발급 후 keys.js 교체</li>
+            <li><strong>위험 3 및 대안:</strong> 포스터·이미지 누락(null) ⇒ 대체 표지 출력</li>
+         </ul>
+      </section>
+
+
+   </main>
+</body>
+
+</html>
