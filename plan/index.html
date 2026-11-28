@@ -1,337 +1,222 @@
-<!DOCTYPE html>
-<!--
-   기말 프로젝트 기획서 양식 : web-final/plan/index.html
+<!--기획서(양식 적용 전)-->
 
-   1. 이 파일을 내 web-final 저장소의 plan 폴더 안에 둡니다.
-      (주소 https://내아이디.github.io/web-final/plan/)
-   2. TODO 주석이 붙은 곳마다, 노란 점선 상자(class="todo")를 지우고 내 내용을 씁니다.
-      (VS Code 확장 Todo Tree를 쓰면 TODO 줄이 한 목록으로 모입니다. 없으면 Ctrl+Shift+F로 TODO 검색)
-   3. 끝낸 TODO 주석 줄과 노란 상자는 지웁니다. 노란 상자가 남아 있으면 화면 맨 위에 "남은 TODO" 띠가 보입니다.
-   4. 그림 파일(call.png, sketch-board.jpg, sketch-plusone.jpg)은 이 index.html과 같은 plan 폴더에 넣습니다.
-      파일 이름이 src와 똑같으면 저절로 보입니다(대소문자와 확장자까지 같게).
-   5. 일곱 항목의 번호와 순서는 바꾸지 않습니다. 색과 글꼴 같은 디자인은 바꿔도 됩니다.
-   6. 대표 요청 주소의 키 자리에는 대문자 KEY라고 적습니다. 실제 키는 keys.js 한 곳에만 둡니다.
-   7. 다 쓰면 커밋, 동기화 ⇒ 13주차 수업 시작 전까지 저장소 주소와 기획서 주소를 LMS 과제로 제출합니다.
--->
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- TODO 기획서 0: title의 "내 사이트 이름"을 내 사이트 이름으로 바꾸기 -->
-   <title>기획서 : 과몰입보드</title>
+   <title>기말 프로젝트 기획서</title>
    <style>
-      /* 기획서 양식 스타일 : 12주차 4차시 27장 예시와 같은 모양. 바꿔도 됩니다 */
-      :root {
-         --deep: #1f3a68;
-         --line: #d4dbe6;
-         --head: #e8eef7;
-         --bg: #f4f6fa;
-      }
-
       * {
          box-sizing: border-box;
       }
 
       body {
-         margin: 0;
-         padding: 20px 28px 40px;
-         background: var(--bg);
-         color: #222;
-         font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
-         font-size: 17px;
+         max-width: 960px;
+         margin: 0 auto;
+         padding: 32px 20px;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
          line-height: 1.6;
-         word-break: keep-all;
-         overflow-wrap: anywhere;
+         color: #222;
+         background: #f9fafb;
       }
 
       header {
-         display: flex;
-         flex-wrap: wrap;
-         align-items: baseline;
-         gap: 6px 18px;
-         border-bottom: 3px solid var(--deep);
-         padding-bottom: 8px;
-         margin-bottom: 16px;
+         border-bottom: 2px solid #1e3a8a;
+         padding-bottom: 16px;
+         margin-bottom: 32px;
       }
 
-      header h1 {
-         font-size: 28px;
-         margin: 0;
-         color: var(--deep);
+      h1 {
+         margin: 0 0 8px;
+         color: #1e3a8a;
       }
 
-      header p {
-         margin: 0;
-         color: #555;
-         overflow-wrap: anywhere;
-      }
-
-      .grid {
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         gap: 14px 18px;
+      h2 {
+         margin: 32px 0 12px;
+         padding-left: 10px;
+         border-left: 4px solid #1e3a8a;
+         font-size: 1.25rem;
       }
 
       section {
          background: #fff;
-         border: 1px solid var(--line);
-         border-radius: 10px;
-         padding: 12px 18px 14px;
-         min-width: 0;
-      }
-
-      section.wide {
-         grid-column: 1 / -1;
-      }
-
-      h2 {
-         font-size: 20px;
-         margin: 0 0 8px;
-         color: var(--deep);
-      }
-
-      ul {
-         margin: 0;
-         padding-left: 22px;
-      }
-
-      p {
-         margin: 4px 0;
-      }
-
-      .tbl {
-         overflow-x: auto;
+         padding: 20px 24px;
+         margin-bottom: 20px;
+         border: 1px solid #e5e7eb;
+         border-radius: 8px;
       }
 
       table {
-         border-collapse: collapse;
          width: 100%;
-         min-width: 640px;
-         font-size: 16px;
+         border-collapse: collapse;
+         margin-top: 12px;
+         font-size: 0.92rem;
       }
 
       th,
       td {
-         border: 1px solid #c9d2e0;
-         padding: 6px 8px;
+         border: 1px solid #d1d5db;
+         padding: 10px;
          text-align: left;
-         vertical-align: top;
+         word-break: break-all;
       }
 
       th {
-         background: var(--head);
-         white-space: nowrap;
-      }
-
-      code {
-         font-family: Consolas, "D2Coding", monospace;
-         font-size: 15px;
-         overflow-wrap: anywhere;
+         background: #eff6ff;
+         color: #1e3a8a;
       }
 
       figure {
-         margin: 0;
+         margin: 12px 0 0;
+         padding: 12px;
+         border: 1px solid #e5e7eb;
+         border-radius: 6px;
+         background: #f8fafc;
+         text-align: center;
       }
 
-      figure+figure {
-         margin-top: 12px;
+      figure img {
+         max-width: 100%;
+         height: auto;
+         display: block;
+         margin: 0 auto 8px;
+         border: 1px solid #cbd5e1;
       }
 
       figcaption {
-         font-size: 15px;
-         color: #555;
-         margin-top: 4px;
+         font-size: 0.88rem;
+         color: #475569;
       }
 
-      /* 주소창 모양 틀 : 주소 줄 + 캡처 그림 */
-      .shot {
-         border: 1px solid #b8c2d2;
-         border-radius: 6px;
-         overflow: hidden;
-         background: #fff;
+      .sketch-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         gap: 16px;
       }
 
-      .shot .bar {
-         background: #e9ecf1;
-         padding: 4px 10px;
-         font-family: Consolas, monospace;
-         font-size: 14px;
-         color: #333;
-         overflow-wrap: anywhere;
+      ul {
+         padding-left: 20px;
+         margin: 8px 0;
       }
 
-      /* 그림 : 파일이 아직 없으면 빗금 상자로 보임 */
-      figure img {
-         display: block;
-         width: 100%;
-         height: auto;
-         min-height: 140px;
-         max-height: 520px;
-         object-fit: contain;
-         background: repeating-linear-gradient(135deg, #fff 0 10px, #eef1f6 10px 20px);
-      }
-
-      .sk {
-         display: flex;
-         gap: 12px;
-      }
-
-      .sk figure {
-         flex: 1;
-         min-width: 0;
-         margin-top: 0;
-      }
-
-      /* TODO 상자 : 내 내용을 쓰면 지움 */
-      .todo {
-         background: #fff4cc;
-         border: 1px dashed #b38f00;
-         border-radius: 4px;
-         padding: 0 6px;
-         color: #5c4700;
-      }
-
-      #todo-left {
-         display: none;
-         background: #fff4cc;
-         border: 2px solid #b38f00;
-         border-radius: 8px;
-         padding: 6px 14px;
-         margin-bottom: 14px;
-         color: #5c4700;
-         font-weight: 700;
-      }
-
-      @media (max-width: 760px) {
-         body {
-            padding: 14px 14px 30px;
-         }
-
-         .grid {
-            grid-template-columns: 1fr;
-         }
-
-         .sk {
-            flex-direction: column;
-         }
+      li {
+         margin-bottom: 6px;
       }
    </style>
 </head>
 
 
 
-
-
 <body>
-   <p id="todo-left"></p>
-
    <header>
-      <h1>기말 프로젝트 기획서</h1>
-      <!-- TODO 기획서 0: 내 사이트 이름과 내 기획서 주소(내아이디 자리에 내 GitHub 아이디) -->
-      <p><span class="todo">과몰입보드</span> / https://<span class="todo">nan041768-ui</span>.github.io/web-final/plan/</p>
+      <h1>[과몰입보드] 프로젝트 기획서</h1>
+      <p>작성자: YoonHee Min | GitHub ID: nan041768-ui</p>
    </header>
 
-   <div class="grid">
-      <section id="s1">
-         <h2>1. 이름, GitHub 아이디, 사이트 이름</h2>
-         <!-- TODO 기획서 1: 이름, GitHub 아이디(소문자), 사이트 이름 -->
+   <main>
+
+
+      <!-- 요구항목1. 기본 정보 -->
+      <section>
+         <h2>1. 기본 정보</h2>
          <ul>
-            <li>이름 : <span class="todo">민윤희</span></li>
-            <li>GitHub 아이디 : <span class="todo">nan041768-ui</span></li>
-            <li>사이트 이름 : <span class="todo">과몰입보드</span></li>
+            <li><strong>이름:</strong> 민윤희</li>
+            <li><strong>GitHub ID:</strong> nan041768-ui</li>
+            <li><strong>사이트 이름:</strong> 과몰입보드 (OverMoodBoard)</li>
          </ul>
       </section>
 
-      <section id="s2">
-         <h2>2. 누구를 위한 사이트인가?: 영화 사이트 계획</h2>
-         <!-- TODO 기획서 2: 누구를 위한 사이트인지 한 줄, 보드와 박스오피스와 상세에 보여 줄 것 -->
-         <p><b>한 줄</b> : <span class="todo">영화 감상 후 해당 영화의 여운·분위기와 관련된 이미지 수집을 희망하는 영화 팬 대 </span></p>
+
+
+      <!-- 2. 사이트 소개 및 구성 -->
+      <section>
+         <h2>2. 사이트 소개 · 주요 화면</h2>
          <ul>
-            <li>보드 : <span class="todo">TMDB 실시간 영화 목록, 제목 검색, 정렬(평점순·최신 개봉순·제목 가나다순), 찜 토글·저장 개수 표시</span></li>
-            <li>박스오피스 : <span class="todo"> KOBIS 일별 박스오피스 순위·관객 수·개봉일, TMDB 포스터</span></li>
-            <li>상세 : <span class="todo">세부 정보(선택 영화 TMDB 추가 호출 → 대형 포스터, 제목, 개봉일, 평점, 줄거리, 장르)</span></li>
+            <li><strong>대상:</strong> 영화 감상 후 해당 영화의 여운·분위기와 관련된 이미지 수집을 희망하는 영화 팬 대상</li>
+            <li><strong>보드 (index.html):</strong> TMDB 실시간 영화 목록, 제목 검색, 정렬(평점순·최신 개봉순·제목 가나다순), 찜 토글·저장 개수 표시</li>
+            <li><strong>박스오피스 (boxoffice.html):</strong> KOBIS 일별 박스오피스 순위·관객 수·개봉일, TMDB 포스터</li>
+            <li><strong>상세 (detail.html):</strong> 세부 정보(선택 영화 TMDB 추가 호출 → 대형 포스터, 제목, 개봉일, 평점, 줄거리, 장르 등)</li>
          </ul>
       </section>
 
-      <section id="s3" class="wide">
-         <!-- TODO 기획서 3: 플러스원 페이지 이름, 한 줄 소개, 쓰는 API 표 -->
-         <h2>3. 플러스원 페이지 : <span class="todo">TODO 페이지 이름</span></h2>
-         <p><span class="todo">TODO 한 줄 소개(이 페이지에서 무엇을 할 수 있는지)</span></p>
-         <div class="tbl">
-            <table>
-               <thead>
-                  <tr>
-                     <th scope="col">API</th>
-                     <th scope="col">제공기관</th>
-                     <th scope="col">대표 요청 주소</th>
-                     <th scope="col">키 이름</th>
-                     <th scope="col">키 발급 상태</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <!-- TODO 기획서 3: API 한 개 = tr 한 줄. 두 개 이상이면 이 tr을 복사해 늘림 -->
-                  <!-- 대표 요청 주소의 키 자리는 대문자 KEY. 키 발급 상태는 받음, 신청함(승인 대기), 필요 없음(키 없는 보조 API) 중 하나 -->
-                  <tr>
-                     <td><span class="todo">TODO API 이름</span></td>
-                     <td><span class="todo">TODO 제공기관</span></td>
-                     <td><code><span class="todo">TODO https://...KEY...</span></code></td>
-                     <td><code><span class="todo">TODO 예: FOOD_KEY</span></code></td>
-                     <td><span class="todo">TODO 받음 / 신청함(승인 대기)</span></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
+
+
+      <!-- 3. 플러스원 페이지 및 API 표 -->
+      <section>
+         <h2>3. 플러스원 페이지 · 사용 API</h2>
+         <ul>
+            <li><strong>페이지 이름:</strong> 과몰입보드</li>
+            <li><strong>한 줄 소개:</strong> 영화 분위기 키워드 입력 시 관련 이미지/배경화면 탐색 페이지</li>
+         </ul>
+         <table>
+            <thead>
+               <tr>
+                  <th>API 이름</th>
+                  <th>제공기관</th>
+                  <th>대표 요청 주소</th>
+                  <th>키 이름</th>
+                  <th>키 발급 상태</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Pixabay API</td>
+                  <td>Pixabay</td>
+                  <td>https://pixabay.com/api/?key=KEY&q=검색어&image_type=photo&lang=ko</td>
+                  <td>PIXABAY_KEY</td>
+                  <td>받음</td>
+               </tr>
+            </tbody>
+         </table>
       </section>
 
-      <section id="s4">
+
+
+      <!-- 4. 주소창 호출 결과 캡처 1장 -->
+      <section>
          <h2>4. 주소창 호출 결과</h2>
-         <!-- TODO 기획서 4: 주소창에서 대표 요청 주소를 부른 화면을 캡처해 plan 폴더에 call.png로 저장 -->
          <figure>
-            <div class="shot">
-               <!-- TODO 기획서 4: 주소 줄에는 내가 부른 주소를 쓰되 키 자리는 KEY -->
-               <div class="bar"><span class="todo">TODO 부른 주소(키 자리는 KEY)</span></div>
-               <img src="call.png" alt="주소창 호출 결과">
-            </div>
-            <figcaption>call.png : <span class="todo">TODO 응답에서 무엇이 보이는지 한 줄(예: COOKRCP01.row에 레시피 5건)</span>
-            </figcaption>
-         </figure>
-         <!-- TODO 기획서 4: 안내문 9.5절 카탈로그 밖 API를 쓸 때만 아래 figure를 남기고 console.png를 넣음. 카탈로그 안 API만 쓰면 아래 figure를 통째로 지움 -->
-         <figure>
-            <img src="console.png" alt="콘솔 fetch 성공 화면">
-            <figcaption>console.png : <span class="todo">TODO 카탈로그 밖 API일 때만, 개발자 도구 Console에서 fetch로 부른 응답이 빨간 오류 없이
-                  보이는 화면</span></figcaption>
+            <img src="./call.png" alt="API 주소창 호출 결과 캡처">
+            <figcaption> call.png: Pixabay hits 배열 '밤하늘' 사진 5건</figcaption>
          </figure>
       </section>
 
-      <section id="s5">
+
+
+      <!-- 5. 화면 스케치 2장 -->
+      <section>
          <h2>5. 화면 스케치</h2>
-         <!-- TODO 기획서 5: 보드와 플러스원 페이지 스케치 2장(손그림 사진도 됨). jpg가 아니면 src의 확장자를 바꿈 -->
-         <div class="sk">
+         <div class="sketch-grid">
             <figure>
                <img src="sketch-board.jpg" alt="보드 화면 스케치">
-               <figcaption>보드 : <span class="todo">TODO 한 줄 설명</span></figcaption>
+               <figcaption>보드 화면 스케치</figcaption>
             </figure>
             <figure>
-               <img src="sketch-plusone.jpg" alt="플러스원 페이지 스케치">
-               <figcaption>플러스원 페이지 : <span class="todo">TODO 한 줄 설명</span></figcaption>
+               <img src="sketch-plusone.jpg" alt="플러스원 페이지 화면 스케치">
+               <figcaption>플러스원 페이지 화면 스케치</figcaption>
             </figure>
          </div>
       </section>
 
-      <section id="s6">
+
+
+      <!-- 6. 퍼뜨릴 계획과 받고 싶은 페이지 -->
+      <section>
          <h2>6. 퍼뜨릴 계획과 받고 싶은 페이지</h2>
-         <!-- TODO 기획서 6: 내 플러스원을 누구에게 보낼지, 왜 쓸모 있는지, 받고 싶은 페이지 아이디어 -->
          <ul>
-            <li>누구에게 : <span class="todo">리뷰·추천 중심 영화 사이트 제작한 학생</span></li>
-            <li>왜 쓸모 : <span class="todo">감상한 영화와 관련된 키워드에 맞는 분위기의 이미지/배경화면 조회 가능, 영화 감상의 여운 확장</span></li>
-            <li>받고 싶은 페이지 : <span class="todo">영화 원작 도서 찾기</span></li>
+            <li><strong>누구에게:</strong> 영화 감상 후 여운을 중요시하는 학생, 리뷰·추천 중심 영화 사이트 제작한 학생</li>
+            <li><strong>왜 쓸모:</strong> 감상한 영화와 관련된 키워드에 맞는 분위기의 이미지/배경화면 조회 가능, 영화 감상의 여운 확장</li>
+            <li><strong>받고 싶은 페이지:</strong> 영화 원작 도서 찾기</li>
          </ul>
       </section>
 
-      <section id="s7">
+
+
+      <!-- 7. 13~15주차 일정, 위험, 대안 -->
+      <section>
          <h2>7. 13~15주차 일정과 위험, 대안</h2>
-         <!-- TODO 기획서 7: 주차별 할 일과, 실제로 일어날 수 있는 일 ⇒ 그때 할 행동(예: 정보나루 승인이 늦으면 식약처 레시피로 바꾼다) -->
          <ul>
             <li><strong>13주차:</strong> TMDB 실시간 보드·상세·KOBIS 박스오피스 1차 점검</li>
             <li><strong>14주차:</strong> Pixabay 무드보드 플러스원 페이지 구현, 동료 PR 교환, pages.html 연결</li>
@@ -341,17 +226,9 @@
             <li><strong>위험 3 및 대안:</strong> 포스터·이미지 누락(null) ⇒ 대체 표지 출력</li>
          </ul>
       </section>
-   </div>
 
-   <script>
-      // 남은 TODO 상자 수를 화면 맨 위에 알려 줌(다 지우면 띠가 사라짐). 이 script는 지우지 않아도 됩니다
-      const left = document.querySelectorAll(".todo").length;
-      if (left > 0) {
-         const box = document.querySelector("#todo-left");
-         box.textContent = "남은 TODO " + left + "곳 : 노란 점선 상자를 내 내용으로 바꾸세요";
-         box.style.display = "block";
-      }
-   </script>
+
+   </main>
 </body>
 
 </html>
